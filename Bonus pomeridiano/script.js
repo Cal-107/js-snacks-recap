@@ -6,10 +6,19 @@ const btn = document.getElementById('btn');
 btn.addEventListener('click', function () {
     let inputUte = ( prompt('Inserisca un numero di 4 cifre'))
 
-    while( inputUte.length < 4 || inputUte.length > 4) {
+    while( inputUte.length < 4 || inputUte.length > 4 || isNaN(inputUte) ) {
         inputUte = ( prompt('Inserisca un numero di 4 cifre'))
         console.log(inputUte)
     }
 
+    let tot = 0;
+    let media = 0;
+    for (let i = 0; i < inputUte.length; i++) {
+        tot += parseInt(inputUte[i])
+    }
+
+    media = tot / inputUte.length;
+
+    console.log(tot, media)
 })
 

@@ -4,7 +4,13 @@
 const btn = document.querySelector('#btn');
 
 btn.addEventListener('click', function () {
-    let numChoi = parseInt( prompt('Inserisca un numero di 4 cifre'))
+    let inputUte = ( prompt('Inserisca un numero di 4 cifre'))
+    console.log(inputUte);
+
+    while( inputUte.length < 4 || inputUte.length > 4) {
+        inputUte = ( prompt('Inserisca un numero di 4 cifre'))
+        console.log(inputUte)
+    }
+
 })
 
-console.log(numChoi)
